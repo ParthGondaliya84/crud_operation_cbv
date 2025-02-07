@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'cbv_crud_app',
+    'cbv_crud_app.apps.CbvCrudAppConfig',
 ]
 
 MIDDLEWARE = [
