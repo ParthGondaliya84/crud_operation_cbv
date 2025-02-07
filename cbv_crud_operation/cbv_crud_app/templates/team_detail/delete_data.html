@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>delete data</title>
+  </head>
+  <body>
+    <h1>delete data</h1>
+
+    <h2>Are you sure you want to delete this Team Detail?</h2>
+
+    <p>{{ team_detail_detail_data.name }}</p>
+
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit">Yes, delete</button>
+    </form>
+
+    <a href="{% url 'list_data' %}">Cancel</a>
+  </body>
+</html>

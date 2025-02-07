@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list data</title>
+</head>
+<body>
+    <h1>list data</h1>
+
+    <ul>
+        {% for data in team_detail_list_data %}
+            <li>
+                <a href="{% url 'detail_data' data.pk %}">{{ data.team_name }}</a> 
+                - <a href="{% url 'update_data' data.pk %}">Edit</a> | 
+                <a href="{% url 'delete_data' data.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <a href="{% url 'create_data' %}">Add New Employee</a>
+
+    <p>back to home <a href="{% url "home" %}">Click here!!</a></p>
+    
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>create data</title>
+  </head>
+  <body>
+    <h1>create data</h1>
+
+    <h2>{% if form.instance.pk %}Update{% else %}Create{% endif %} Employee</h2>
+
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Save</button>
+    </form><br>
+    <p>back to home <a href="{% url "home" %}">Click here!!</a></p>
+
+  </body>
+</html>

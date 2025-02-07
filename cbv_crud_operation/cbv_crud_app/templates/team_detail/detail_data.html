@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>detail data</title>
+  </head>
+  <body>
+    <h1>detail data</h1>
+
+    <h2>{{ team_detail_detail_data.team_name }}</h2>
+    <p>Leader: {{ team_detail_detail_data.leader_name }}</p>
+    <p>Email: {{ team_detail_detail_data.email }}</p>
+    <p>Phone Number: {{ team_detail_detail_data.number }}</p>
+    <p>Total Employee: {{ team_detail_detail_data.total_employee }}</p>
+
+    <a href="{% url 'update_data' team_detail_detail_data.pk %}">Edit</a> |
+    <a href="{% url 'delete_data' team_detail_detail_data.pk %}">Delete</a>
+    
+    <p>back to home <a href="{% url "home" %}">Click here!!</a></p>
+
+  </body>
+</html>
